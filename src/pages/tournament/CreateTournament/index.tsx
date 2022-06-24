@@ -1,13 +1,18 @@
 import React from "react";
-import { TournamentContainer } from "../components/TournamentContainer";
+import { CreateTouramentBody } from "../components/CreateTouramentBody";
+import { CreateTournamentContainer } from "../components/CreateTournamentContainer";
+import { CreateTournamentHeading } from "../components/CreateTournamentHeading";
 import "./style.scss";
 
 export const CreateTournament = () => {
   return (
     <>
-      <TournamentContainer>
-        <h1>Create Tournament</h1>
-      </TournamentContainer>
+      <CreateTournamentContainer>
+        <div className="panel">
+          <CreateTournamentHeading></CreateTournamentHeading>
+          <CreateTouramentBody></CreateTouramentBody>
+        </div>
+      </CreateTournamentContainer>
     </>
   );
 };
