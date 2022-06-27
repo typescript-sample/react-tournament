@@ -9,10 +9,10 @@ export const CreateTouramentBody = () => {
       <div className="createtournament-body">
         <form>
           <div className="row createtourament-body-adjust ">
-            <div className="col s4">
+            <div className="col s6">
               <UploadAndDisplayImage></UploadAndDisplayImage>
             </div>
-            <div className="col s8">
+            <div className="col s6">
               <div>
                 <p>ID</p>
                 <input type="text" name="name" />
