@@ -51,7 +51,8 @@ import "./assets/css/layout.css";
 import "./assets/css/theme.css";
 import "./assets/css/dark.css";
 import { CreateTournament } from "./pages/tournament/CreateTournament";
-import { FindTournament } from "./pages/tournament/FindTournament";
+import { TournamentsForm } from "./pages/tournament/FindTournament/tournaments-form";
+import { TournamentForm } from "./pages/tournament/FindTournament/tournament-form";
 
 function parseDate(value: string, format: string): Date | null | undefined {
   if (!format || format.length === 0) {
@@ -147,7 +148,8 @@ function App() {
             path="/createtournament"
             element={<CreateTournament></CreateTournament>}
           />
-          <Route path="/findtournament" element={<FindTournament />} />
+          <Route path="/findtournament" element={<TournamentsForm />} />
+          <Route path="/findtournament/:id" element={<TournamentForm />} />
         </Route>
       </Routes>
     </BrowserRouter>
