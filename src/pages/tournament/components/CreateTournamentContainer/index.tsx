@@ -2,14 +2,16 @@ import React from "react";
 
 import "./style.scss";
 
-type TournamentContainerProps = {
+type CreateTournamentContainerProps = {
   children: any;
 };
 
-export const TournamentContainer = (props: TournamentContainerProps) => {
+export const CreateTournamentContainer = (
+  props: CreateTournamentContainerProps
+) => {
   return (
     <>
-      <div className="tournamentcontainer">{props.children}</div>
+      <div className="createtournamentcontainer">{props.children}</div>
     </>
   );
 };
