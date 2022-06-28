@@ -9,7 +9,7 @@ import { createTournamentApi } from "../Apis/createTournamentApi.api";
 
 export const CreateTournament = () => {
   const [kindState, setKindState] = useState("round robin");
-  const [statusState, StatusState] = useState("active");
+  const [statusState, setStatusState] = useState("active");
 
   const createTournament = async (e: any) => {
     e.preventDefault();
@@ -101,7 +101,7 @@ export const CreateTournament = () => {
                 <select
                   className="jimmy"
                   value={statusState}
-                  onChange={(e: any) => setKindState(e.target.value)}
+                  onChange={(e: any) => setStatusState(e.target.value)}
                 >
                   <option value="active">Active </option>
                   <option value="inactive">Inactive</option>

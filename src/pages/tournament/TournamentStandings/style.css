@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+
+th {
+  padding: 1.2rem 1rem;
+  color: #6c6c6c;
+  font-size: 0.8rem;
+}
+
+td {
+  border-bottom: 1px solid #efefef;
+  height: 3.75rem;
+}
+
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+thead {
+  background-color: #fbfbfb;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.container {
+  max-width: 1376px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.standings-form {
+  width: 13rem;
+  padding-right: 1px;
+  text-align: left;
+}
+.standings-form__won {
+  width: 2.2rem;
+  height: 2.2rem;
+  line-height: 2.3rem;
+  text-align: center;
+  background: #76766f;
+  color: #fff;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 400;
+  background: #13cf00;
+  margin-right: 5px;
+}
+.standings-team__pic {
+  width: 2.5rem;
+  height: 2.5rem;
+  vertical-align: middle;
+}
+.standings-team__name {
+  padding-left: 1rem;
+  font-weight: 300px;
+  font-size: 1rem;
+  color: black;
+}
+.standings-team__name:hover {
+  text-decoration: underline;
+}
+.standings-position__value {
+  width: 2rem;
+  display: inline-block;
+  font-size: 1rem;
+}
+.standings-position__before {
+  border-radius: 100%;
+  width: 4px;
+  height: 4px;
+  background: #adadad;
+  top: -0.3rem;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+}
+.standings-button__tooltip {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.standings-text-centre {
+  vertical-align: middle;
+  text-align: center;
+  padding: 1.2rem 1rem;
+}
+.standings-text-team {
+  padding-left: 5.5rem;
+  text-align: left;
+  vertical-align: middle;
+}
+.standings-header {
+  position: relative;
+  padding: 20px 0;
+  background-color: #f5f5f5;
+}
+.standings-box {
+  margin-bottom: 20px;
+}
+.standings-rules {
+  margin-bottom: 5px;
+  text-align: right;
+}
+.standings-rules--won {
+  width: 2.2rem;
+  height: 2.2rem;
+  line-height: 2.3rem;
+  text-align: center;
+  background: #76766f;
+  color: #fff;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 400;
+  background: #13cf00;
+  margin-right: 5px;
+}
+.standings-rules--drawn {
+  width: 2.2rem;
+  height: 2.2rem;
+  line-height: 2.3rem;
+  text-align: center;
+  background: #76766f;
+  color: #fff;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 400;
+  margin-right: 5px;
+}
+.standings-rules--lost {
+  width: 2.2rem;
+  height: 2.2rem;
+  line-height: 2.3rem;
+  text-align: center;
+  background: #d81920;
+  color: #fff;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 400;
+  margin-right: 5px;
+}
+
+.text-adjust {
+  font-size: 1rem;
+  color: black;
+  font-weight: 300;
+}
+.text-adjust__bold {
+  font-weight: 600;
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */

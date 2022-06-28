@@ -1,0 +1,92 @@
+.team__card {
+  &-box {
+    box-shadow: 0 1px 4px 0 rgb(0 0 0 / 15%);
+    display: block;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    height: auto;
+  }
+  &-image {
+    height: 13rem;
+    overflow: hidden;
+    &--adjust {
+      position: relative;
+      display: block;
+      height: 100%;
+      background-position: 50%;
+      background-size: cover;
+    }
+    &--badge {
+      width: 96px;
+      height: 96px;
+      position: absolute;
+      top: 9rem;
+      left: 50%;
+      margin-left: -50px;
+      border-radius: 100%;
+      background: #fff;
+      &---container {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &---adjust {
+        width: 6rem;
+        height: 6rem;
+        vertical-align: middle;
+      }
+    }
+  }
+  &-info {
+    &--box {
+      padding: 3rem 0.5rem 1rem;
+      line-height: 1.8;
+      &---adjust {
+        margin-top: 6px;
+      }
+      &---clubname {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: black;
+      }
+      &---stadiumname {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-top: 0.5rem;
+      }
+
+      &---button {
+        display: inline-block;
+        position: relative;
+        font-weight: 400;
+        margin-top: 2.3rem;
+
+        cursor: pointer;
+        &----text {
+          font-size: 1rem;
+          line-height: 1.4;
+          color: black;
+        }
+        &----icon {
+          margin-left: 6px;
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+}
+
+.team__card-box:hover .team__card-image {
+  transform: scale(1.2);
+  transition: transform 2s;
+  background-position: 50%;
+  background-size: cover;
+}
+
+.team__card-info--box---button----text:hover {
+  text-decoration: underline;
+  transform: scale(1.2);
+}

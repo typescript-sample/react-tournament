@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <style>
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-}
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+      }
     </style>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -18,6 +18,13 @@ select {
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -37,7 +44,7 @@ select {
   <body id="sysBody" class="full-header">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="sysToast" class="toast-message alert-success"></div>
-    <div id="sysLoading" class="loader-wrapper" style="display: none;">
+    <div id="sysLoading" class="loader-wrapper" style="display: none">
       <div class="loader-sign">
         <div class="loader"></div>
         <!-- <div class="loader-text">Please wait</div> -->
@@ -51,8 +58,20 @@ select {
           <p id="sysMessage"></p>
         </div>
         <footer>
-          <button type='button' class='btn-cancel' id='sysNo' name='btnCancel' onclick="noOnClick()" />
-          <button type='submit' class='btn-accept' id='sysYes' name='btnAccept' onclick="yesOnClick()" />
+          <button
+            type="button"
+            class="btn-cancel"
+            id="sysNo"
+            name="btnCancel"
+            onclick="noOnClick()"
+          />
+          <button
+            type="submit"
+            class="btn-accept"
+            id="sysYes"
+            name="btnAccept"
+            onclick="yesOnClick()"
+          />
         </footer>
       </div>
     </div>
@@ -68,9 +87,19 @@ select {
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script>
-      var sysTitle, sysBody, sysLoading, sysToast, sysAlert, sysMessageHeader, sysMessage, sysErrorDetail, sysErrorDetailText,
-        sysYes, sysNo, sysErrorDetailCaret;
-  
+      var sysTitle,
+        sysBody,
+        sysLoading,
+        sysToast,
+        sysAlert,
+        sysMessageHeader,
+        sysMessage,
+        sysErrorDetail,
+        sysErrorDetailText,
+        sysYes,
+        sysNo,
+        sysErrorDetailCaret;
+
       function initDoc() {
         sysTitle = document.getElementById("sysTitle");
         sysBody = document.getElementById("sysBody");
@@ -85,33 +114,33 @@ select {
         sysNo = document.getElementById("sysNo");
         sysErrorDetailCaret = document.getElementById("sysErrorDetailCaret");
       }
-  
+
       initDoc();
       var yesOnClick = function () {
-        sysAlert.style.display = 'none';
+        sysAlert.style.display = "none";
         if (window.fyesOnClick) {
           window.fyesOnClick();
         }
-        const input = sysYes['activeElement'];
+        const input = sysYes["activeElement"];
         if (input) {
           try {
             input.focus();
           } catch (err) {}
         }
-        sysYes['activeElement'] = null;
+        sysYes["activeElement"] = null;
       };
       var noOnClick = function () {
-        sysAlert.style.display = 'none';
+        sysAlert.style.display = "none";
         if (window.fnoOnClick) {
           window.fnoOnClick();
         }
-        const input = sysYes['activeElement'];
+        const input = sysYes["activeElement"];
         if (input) {
           try {
             input.focus();
           } catch (err) {}
         }
-        sysYes['activeElement'] = null;
+        sysYes["activeElement"] = null;
       };
       var callCount = 0;
     </script>
