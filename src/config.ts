@@ -8,7 +8,7 @@ export const config = {
   role_url: 'http://localhost:8083/roles',
   privilege_url: 'http://localhost:8083/privileges',
   audit_log_url: 'http://localhost:8083/audit-logs',
-  tournament_url: 'http://localhost:8080/match'
+  match_url: 'http://localhost:8080/match'
 };
 
 export const env = {

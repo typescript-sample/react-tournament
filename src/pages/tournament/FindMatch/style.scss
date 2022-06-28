@@ -1,0 +1,50 @@
+.match-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.custom{
+  margin: auto;
+}
+
+
+ul {
+  list-style: none;
+}
+
+.match
+{
+
+&-id{
+  width: 10rem;
+  margin-left: 4rem;
+  text-align: left;
+  display: block;
+}
+&-round {
+  width: 10rem;
+  margin-left: 4rem;
+  text-align: center;
+}
+&-team1{
+  width: 25rem;
+  margin-left: 4rem;
+  text-align: center;
+}
+&-result{
+  width: 10rem;
+  text-align: center;
+}
+&-team2{
+  width: 25rem;
+  margin-left: 4rem;
+  text-align: center;
+}
+&-time{
+  width: 20rem;
+  text-align: right;
+  display: block;
+}
+}

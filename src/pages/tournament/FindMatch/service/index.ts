@@ -2,37 +2,37 @@ import axios from 'axios';
 import { HttpRequest } from 'axios-core';
 import { useEffect, useState } from 'react';
 import { options, storage } from 'uione';
-import { TournamentClient, TournamentService } from './tournament';
-export * from './tournament';
+import { MatchClient, MatchService } from './match';
+export * from './match';
 // axios.defaults.withCredentials = true;
 
 const httpRequest = new HttpRequest(axios, options);
 export interface Config {
-  tournament_url: string;
+  match_url: string;
 }
 class ApplicationContext {
-  TournamentService?: TournamentService;
+  MatchService?: MatchService;
   constructor() {
     this.getConfig = this.getConfig.bind(this); 
-    this.getTournamentService = this.getTournamentService.bind(this); 
+    this.getMatchService = this.getMatchService.bind(this); 
   }
   getConfig(): Config {
     return storage.config();
   }
 
-  getTournamentService(): TournamentService {
-    if (!this.TournamentService) {
+  getMatchService(): MatchService {
+    if (!this.MatchService) {
       const c = this.getConfig();
-      this.TournamentService = new TournamentClient(httpRequest, c.tournament_url);
+      this.MatchService = new MatchClient(httpRequest, c.match_url);
     }
-    return this.TournamentService;
+    return this.MatchService;
   }
 }
 
 export const appContext = new ApplicationContext();
 
-export function getTournamentService(): TournamentService {
-  return appContext.getTournamentService();
+export function getMatchService(): MatchService {
+  return appContext.getMatchService();
 }
 
 
