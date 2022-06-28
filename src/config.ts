@@ -6,6 +6,8 @@ export const config = {
 
   user_url: 'http://localhost:8083/users',
   role_url: 'http://localhost:8083/roles',
+  player_url:'http://localhost:8080/players',
+  team_url:'http://localhost:8080/teams',
   privilege_url: 'http://localhost:8083/privileges',
   audit_log_url: 'http://localhost:8083/audit-logs',
 };

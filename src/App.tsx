@@ -16,6 +16,10 @@ import { RoleForm } from "./admin/role-form";
 import { RolesForm } from "./admin/roles-form";
 import { UserForm } from "./admin/user-form";
 import { UsersForm } from "./admin/users-form";
+import { PlayerForm } from "./admin/player-form";
+import { PlayersForm } from "./admin/players-form";
+import { TeamForm } from "./admin/team-form";
+import { TeamsForm } from "./admin/teams-form";
 import { ChangePasswordForm } from "./authentication/change-password-form";
 import { ForgotPasswordForm } from "./authentication/forgot-password-form";
 import { ResetPasswordForm } from "./authentication/reset-password-form";
@@ -141,7 +145,12 @@ function App() {
             path="admin/roles/assign/:id"
             element={<RoleAssignmentForm />}
           />
-
+          <Route path="admin/players" element={<PlayersForm />} />
+          <Route path="admin/players/add" element={<PlayerForm />} />
+          <Route path="admin/players/edit/:id" element={<PlayerForm />} />
+          <Route path="admin/teams" element={<TeamsForm />} />
+          <Route path="admin/teams/add" element={<TeamForm />} />
+          <Route path="admin/teams/edit/:id" element={<TeamForm />} />
           <Route
             path="/createtournament"
             element={<CreateTournament></CreateTournament>}

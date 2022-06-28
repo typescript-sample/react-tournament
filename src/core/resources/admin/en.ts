@@ -30,5 +30,21 @@ export const en = {
 
   role_assigned_users: 'Assigned Users',
   role_roles_assign_to_groups: 'Role Assign To Group(s)',
+
+  // Player
+  players:'Players',
+  player_id: 'Player Id',
+  player_name: 'Player Name',
+  dateOfBirth: 'Date of Birth',
+
+  // Team
+  teams: ' Teams',
+  team_id: 'Team Id',
+  team_name: 'Team Name',
+  logo: ' Link logo ',
+  description: ' Description',
+  status: 'Status',
+
+
 };
 

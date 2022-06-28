@@ -88,7 +88,6 @@ export const UserForm = () => {
               data-value
               onChange={e => updateTitle(e.target, state.user, setState)}>
               <option value=''>{resource.please_select}</option>
-              )
               {state.titleList.map((item, index) => (
                 <option key={index} value={item.value}>{item.text}</option>)
               )}
