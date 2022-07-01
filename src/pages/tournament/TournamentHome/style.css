@@ -1,0 +1,192 @@
+.tournamentHome_banner-block {
+  display: block;
+  width: 100%;
+  height: 200px;
+  background-color: black;
+}
+.tournamentHome_banner-heading--box {
+  padding: 2rem 0 0 0;
+}
+.tournamentHome_banner-heading--block {
+  display: flex;
+  align-items: center;
+}
+.tournamentHome_banner-heading--pic {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 5px;
+  padding: 11px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 2rem;
+}
+.tournamentHome_banner-heading--pic---adjust {
+  max-width: 56px;
+  font-size: 9px;
+  text-overflow: hidden;
+  overflow: hidden;
+  white-space: nowrap;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.tournamentHome_banner-heading--text---adjust {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+.tournamentHome_banner-heading--kind--adjust {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.tournamentHome_main-wrapper {
+  max-width: 1376px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.tournamentHome_main-sidebar {
+  float: left;
+  width: 29rem;
+  padding: 5rem 4rem 1rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+.tournamentHome_main-sidebar--fixturesHeader {
+  position: relative;
+  padding: 2.3rem 1rem 2rem;
+  background: #fff;
+  text-align: center;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+}
+.tournamentHome_main-sidebar--fixturesHeader---week {
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  font-weight: 400;
+  text-align: center;
+  color: #ff2882;
+}
+.tournamentHome_main-sidebar--fixturesHeader---competition {
+  display: inline-block;
+  vertical-align: middle;
+}
+.tournamentHome_main-sidebar--fixturesHeader---competition----image {
+  width: 150px;
+  height: 60px;
+  display: block;
+}
+.tournamentHome_main-sidebar--fixturesHeader---localtime {
+  padding-top: 1rem;
+  font-size: 0.7rem;
+  color: #6c6c6c;
+}
+.tournamentHome_main-sidebarPush {
+  margin-left: 26rem;
+  padding-left: 3rem;
+  position: relative;
+}
+.tournamentHome_main-hero {
+  margin-top: -2rem;
+  padding: 6rem 0 4rem;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.tournamentHome_main-hero--thumbnail {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+.tournamentHome_main-hero--thumbnail---figure {
+  display: flex;
+  height: 100%;
+}
+.tournamentHome_main-hero--thumbnail---image {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: 50%;
+  flex-basis: 50%;
+  display: block;
+  min-height: 28rem;
+  background: rgba(55, 0, 60, 0.9);
+}
+.tournamentHome_main-hero--thumbnail---image----adjust {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 2s;
+}
+.tournamentHome_main-hero--figcaption {
+  padding: 2.4rem;
+  position: relative;
+  flex-basis: 50%;
+  background: rgba(55, 0, 60, 0.9);
+}
+.tournamentHome_main-hero--figcaption---span {
+  color: #05f0ff;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-style: italic;
+}
+.tournamentHome_main-hero--figcaption---title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  transition: 0.2s;
+  font-weight: 800;
+}
+.tournamentHome_main-hero--figcaption---desc {
+  font-size: 0.8rem;
+  color: #fff;
+  opacity: 0.8;
+  line-height: 1.62;
+  padding-bottom: 2rem;
+}
+
+.tournamentHome_main-sidebar--matchListContainer.tournamentHome_main-sidebar--matchListContainer---day:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.tournamentHome-main-sidebar--matchListContainer---time > time {
+  text-align: center;
+  display: block;
+  padding: 0 1rem 0.8rem;
+  font-size: 0.8rem;
+  color: #2f2f2f;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.col-12 {
+  padding: 0;
+  width: 100%;
+}
+
+.tournamentHome_main-hero--thumbnail:hover .tournamentHome_main-hero--thumbnail---image----adjust {
+  transform: scale(1.2);
+}
+
+.tournamentHome_main-hero--figcaption::before {
+  content: "";
+  width: 0.4rem;
+  height: 100%;
+  position: absolute;
+  left: -0.4rem;
+  top: 0;
+  display: block;
+  background-image: linear-gradient(0deg, #963cff, #05f0ff);
+}
+
+/*# sourceMappingURL=style.css.map */

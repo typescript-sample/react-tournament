@@ -1,0 +1,48 @@
+.tournamentNav_block {
+  line-height: 4.2rem;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 15%);
+  position: relative;
+
+  z-index: 1;
+  margin-left: 0;
+  margin-right: 0;
+  display: block;
+}
+
+.tournamentNav_list {
+  padding-left: 10.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+}
+
+.tournamentNav_block li {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tournamentNav_link {
+  display: inline-block;
+  padding: 0.2rem 2rem;
+  color: white !important;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: relative;
+}
+
+.tournamentNav_link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #963cff, #a64dae);
+  z-index: -1;
+  transition: 0.2s;
+}
+
+.tournamentNav_link:hover::before {
+  width: 100%;
+}

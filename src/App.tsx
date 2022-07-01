@@ -57,6 +57,8 @@ import "./assets/css/dark.css";
 import { CreateTournament } from "./pages/tournament/CreateTournament";
 import TournamentStandings from "./pages/tournament/TournamentStandings";
 import TournamentTeams from "./pages/tournament/TournamentTeams";
+import { TournamentResult } from "./pages/tournament/TournamentResult";
+import { TournamentHome } from "./pages/tournament/TournamentHome";
 
 function parseDate(value: string, format: string): Date | null | undefined {
   if (!format || format.length === 0) {
@@ -166,6 +168,16 @@ function App() {
           <Route
             path="/tournamentteams"
             element={<TournamentTeams></TournamentTeams>}
+          />
+
+          <Route
+            path="/tournamentresult"
+            element={<TournamentResult></TournamentResult>}
+          />
+
+          <Route
+            path="/tournamenthome"
+            element={<TournamentHome></TournamentHome>}
           />
         </Route>
       </Routes>

@@ -1,0 +1,44 @@
+.tournament_result-block {
+  width: 100%;
+  float: left;
+}
+.tournament_result-fixtures {
+  position: relative;
+}
+.tournament_result-round {
+  display: block;
+  font-size: 2.3rem;
+  line-height: 3rem;
+  float: left;
+  font-weight: 400;
+}
+.tournament_result-banner {
+  max-width: 65%;
+  margin-bottom: 2rem;
+  padding-right: 1rem;
+  text-align: right;
+  float: right;
+}
+.tournament_result-banner--adjust {
+  display: block;
+  height: 110px;
+  width: 164px;
+  object-fit: cover;
+  transform: scale(0.85);
+  right: -22px;
+  position: relative;
+}
+.tournament_result-matchlist {
+  margin-bottom: 6rem;
+  border-top: 1px solid #efefef;
+  clear: both;
+}
+.tournament_result-matchlist--container {
+  position: relative;
+}
+
+.tournament_result-matchlist > li {
+  border-bottom: 1px solid #efefef;
+}
+
+/*# sourceMappingURL=style.css.map */

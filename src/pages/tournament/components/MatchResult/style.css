@@ -1,0 +1,158 @@
+.matchresult_block {
+  display: block;
+  color: #242424;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s linear;
+}
+
+.matchresult_block:hover {
+  background: linear-gradient(to right, #642b73, #c6426e);
+  color: white;
+  cursor: pointer;
+}
+
+.matchresult_block:hover .matchresult_content-button--adjust {
+  right: 1.5rem;
+  color: white;
+}
+
+.matchresult_content-block {
+  display: block;
+  padding: 1.2rem;
+  vertical-align: middle;
+}
+.matchresult_content-teams {
+  margin-right: -4px;
+  width: 42%;
+  position: relative;
+  font-size: 0;
+}
+.matchresult_content-team1 {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 7.8rem;
+  position: relative;
+  width: 50%;
+}
+.matchresult_content-team1--name {
+  font-weight: 600;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.matchresult_content-team1--name---adjust {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.matchresult_content-team1--logo {
+  right: 4rem;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.3rem;
+}
+.matchresult_content-team1--logo---adjust {
+  width: 3rem;
+  height: 3rem;
+}
+.matchresult_content-team1--score {
+  background: #37003c;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 400;
+  width: 1.7rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  margin-top: -0.5rem;
+}
+.matchresult_content-team2 {
+  padding-left: 7.8rem;
+  position: relative;
+  width: 50%;
+}
+.matchresult_content-team2--name {
+  font-weight: 600;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.matchresult_content-team2--name---adjust {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.matchresult_content-team2--logo {
+  position: absolute;
+  top: 50%;
+  margin-top: -1.3rem;
+  left: 4.3rem;
+}
+.matchresult_content-team2--logo---adjust {
+  width: 3rem;
+  height: 3rem;
+}
+.matchresult_content-team2--score {
+  background: #37003c;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 400;
+  width: 1.7rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  right: 45%;
+  margin-top: -0.5rem;
+}
+.matchresult_content-stadium {
+  padding-left: 5rem;
+  font-size: 1rem;
+  min-width: 16rem;
+  display: inline-flex;
+  width: 25%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-wrap;
+  border-left-color: rgba(0, 0, 0, 0.15);
+}
+.matchresult_content-stadium--text {
+  margin-top: 3px;
+  font-weight: 400;
+}
+.matchresult_content-stadium--icon {
+  margin-right: 1rem;
+}
+.matchresult_content-stadium--icon---adjust {
+  width: 24px;
+  height: 24px;
+}
+.matchresult_content-button--adjust {
+  display: block;
+  position: absolute;
+  top: 1.5rem;
+  right: 3rem;
+  content: "";
+  width: 40px;
+  height: 40px;
+  transition: right 0.2s;
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+
+.matchresult_content-block span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*# sourceMappingURL=style.css.map */

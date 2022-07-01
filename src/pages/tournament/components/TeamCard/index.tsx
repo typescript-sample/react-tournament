@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getTeamApi } from "../../Apis/getTeamApi.api";
 import "./style.css";
 
-const TeamCard = () => {
+type TeamCardProps = {
+  teamName: string;
+  stadiumName: string;
+  teamPic: string;
+  stadiumPic: string;
+};
+
+const TeamCard = (props: TeamCardProps) => {
   return (
     <a className="team__card-box">
       <div className="team__card-image">
         <span>
           <img
             className="team__card-image--adjust"
-            src="https://media.timeout.com/images/100523993/image.jpg"
+            src={`${props.stadiumPic}`}
             alt=""
           />
         </span>
@@ -17,16 +25,16 @@ const TeamCard = () => {
         <span className="team__card-image--badge---container">
           <img
             className="team__card-image--badge---adjust"
-            src="https://cdn.nba.com/logos/nba/1610612748/global/L/logo.svg"
+            src={`${props.teamPic}`}
             alt=""
           />
         </span>
       </div>
       <div className="team__card-info--box">
         <div className="team__card-info--box---adjust">
-          <h4 className="team__card-info--box---clubname">Miami Heat</h4>
+          <h4 className="team__card-info--box---clubname">{props.teamName}</h4>
           <div className="team__card-info--box---stadiumname">
-            Barclays Center
+            {props.stadiumName}
           </div>
         </div>
         <div className="team__card-info--box---button">
