@@ -1,0 +1,17 @@
+.tournament_heading {
+  &-block {
+    background-color: #37003c;
+    margin-bottom: 4rem;
+    padding: 5rem 0 4rem 2rem;
+    position: relative;
+    background-image: url(https://images.pexels.com/photos/2763927/pexels-photo-2763927.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  &-title {
+    color: #fff;
+    max-width: 70%;
+    font-size: 5rem;
+    font-weight: 600;
+  }
+}

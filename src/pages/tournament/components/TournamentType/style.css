@@ -1,0 +1,46 @@
+.tournament_type-adjust {
+  text-align: center;
+  align-items: center;
+  flex-basis: 50%;
+  margin: 0 1rem;
+}
+.tournament_type-label {
+  background: #000000;
+  padding: 15px;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 90px;
+  color: white;
+}
+.tournament_type-image {
+  width: 50px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  transition: all 0.35s;
+  object-fit: cover;
+}
+.tournament_type-text {
+  font-family: "Open Sans", sans-serif;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  font-weight: 300;
+  font-size: 11px;
+  display: block;
+}
+
+.tournament_type-block:hover .tournament_type-image {
+  transform: scale(1.2);
+}
+
+.tournament_type-label--active {
+  background: linear-gradient(to right, #642b73, #c6426e);
+}
+
+/*# sourceMappingURL=style.css.map */

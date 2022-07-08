@@ -154,6 +154,72 @@
   line-height: 1.62;
   padding-bottom: 2rem;
 }
+.tournamentHome_secondary-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1.6rem;
+}
+.tournamentHome_secondary-wrapper--news {
+  width: calc(50% - 4px);
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+.tournamentHome_secondary-wrapper--news---figure {
+  display: flex;
+  height: 100%;
+}
+.tournamentHome_secondary-wrapper--news---figcaption {
+  padding: 1.6rem 2rem;
+  flex-basis: auto;
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  background-color: rgba(55, 0, 60, 0.9);
+}
+.tournamentHome_secondary-wrapper--news---figcaption----caption {
+  color: #05f0ff;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-style: italic;
+}
+.tournamentHome_secondary-wrapper--news---figcaption----title {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 600;
+  line-height: 2.1rem;
+}
+.tournamentHome_secondary-pics {
+  position: relative;
+  display: block;
+  background: rgba(55, 0, 60, 0.9);
+  width: 9rem;
+  min-height: 6.4rem;
+  min-width: 9rem;
+  flex-basis: auto;
+  float: left;
+  overflow: hidden;
+}
+.tournamentHome_secondary-pics--adjust {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 2s;
+}
 
 .tournamentHome_main-sidebar--matchListContainer.tournamentHome_main-sidebar--matchListContainer---day:not(:last-child) {
   margin-bottom: 1.5rem;
@@ -179,6 +245,21 @@
 }
 
 .tournamentHome_main-hero--figcaption::before {
+  content: "";
+  width: 0.4rem;
+  height: 100%;
+  position: absolute;
+  left: -0.4rem;
+  top: 0;
+  display: block;
+  background-image: linear-gradient(0deg, #963cff, #05f0ff);
+}
+
+.tournamentHome_secondary-wrapper--news---figure:hover .tournamentHome_secondary-pics--adjust {
+  transform: scale(1.2);
+}
+
+.tournamentHome_secondary-wrapper--news---figcaption::before {
   content: "";
   width: 0.4rem;
   height: 100%;

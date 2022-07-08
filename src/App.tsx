@@ -59,6 +59,8 @@ import TournamentStandings from "./pages/tournament/TournamentStandings";
 import TournamentTeams from "./pages/tournament/TournamentTeams";
 import { TournamentResult } from "./pages/tournament/TournamentResult";
 import { TournamentHome } from "./pages/tournament/TournamentHome";
+import { TournamentFixtures } from "./pages/tournament/TournamentFixtures";
+import { TournamentMatch } from "./pages/tournament/TournamentMatch";
 
 function parseDate(value: string, format: string): Date | null | undefined {
   if (!format || format.length === 0) {
@@ -178,6 +180,16 @@ function App() {
           <Route
             path="/tournamenthome"
             element={<TournamentHome></TournamentHome>}
+          />
+
+          <Route
+            path="/tournamentfixtures"
+            element={<TournamentFixtures></TournamentFixtures>}
+          />
+
+          <Route
+            path="/tournamentmatch"
+            element={<TournamentMatch></TournamentMatch>}
           />
         </Route>
       </Routes>

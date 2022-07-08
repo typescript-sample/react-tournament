@@ -1,6 +1,7 @@
 import React from "react";
 import { TournamentNav } from "../components/TournamentNav";
-import { UpcommingMatches } from "../components/UpcommingMatches";
+import { UpcommingMatchesShort } from "../components/UpcommingMatchesShort";
+
 import "./style.css";
 
 export const TournamentHome = () => {
@@ -54,12 +55,18 @@ export const TournamentHome = () => {
                 <div className="tournamentHome_main-sidebar--matchListContainer">
                   <div className="tournamentHome-main-sidebar--matchListContainer---time">
                     <time>Saturday 6 August</time>
-                    <UpcommingMatches></UpcommingMatches>
-                    <UpcommingMatches></UpcommingMatches>
-                    <UpcommingMatches></UpcommingMatches>
+                    <UpcommingMatchesShort
+                      team1Name="MIA"
+                      team1Image="https://cdn.nba.com/logos/nba/1610612748/global/L/logo.svg"
+                      team2Name="MIA"
+                      team2Image="https://cdn.nba.com/logos/nba/1610612748/global/L/logo.svg"
+                      time="2:00"
+                    ></UpcommingMatchesShort>
                   </div>
                 </div>
               </div>
+
+              <div className="tournamentHome_main-sidebar--standingHeader"></div>
             </nav>
             <div className="tournamentHome_main-sidebarPush">
               <div className="col-12">
@@ -87,6 +94,32 @@ export const TournamentHome = () => {
                         </p>
                       </figcaption>
                     </figure>
+                  </div>
+                  <div className="tournamentHome_secondary-wrapper">
+                    <div className="tournamentHome_secondary-wrapper--news">
+                      <figure className="tournamentHome_secondary-wrapper--news---figure">
+                        <a className="tournamentHome_secondary-pics">
+                          <img
+                            className="tournamentHome_secondary-pics--adjust"
+                            src="https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_auto,w_1400/fl_lossy,pg_1/uykqqdm348n5mlrlt3vh/kevin-durant?fimg-ssr-default"
+                          ></img>
+                        </a>
+
+                        <figcaption className="tournamentHome_secondary-wrapper--news---figcaption">
+                          <div className="tournamentHome_secondary-wrapper--news---figcaption----caption">
+                            Hello
+                          </div>
+                          <h4>
+                            <a className="tournamentHome_secondary-wrapper--news---figcaption----title">
+                              Hello
+                            </a>
+                          </h4>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div className="tournamentHome_secondary-wrapper--news">
+                      2
+                    </div>
                   </div>
                 </section>
               </div>

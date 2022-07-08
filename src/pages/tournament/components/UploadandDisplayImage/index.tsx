@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import "./style.css";
 
 const UploadAndDisplayImage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
     <div>
-      <h1>Tourament Logo</h1>
+      <h1 className="upload_image-text">Tourament Logo</h1>
       {selectedImage && (
         <div>
           <img

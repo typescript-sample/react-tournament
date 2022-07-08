@@ -1,0 +1,47 @@
+.tournament_match-block {
+  display: flex;
+}
+.tournament_match-nav {
+  display: flex;
+}
+.tournament_match-nav--block {
+  width: 24rem;
+  flex: 0 26rem;
+  padding-top: 3rem;
+  float: left;
+  z-index: 62;
+  background: #fff;
+  position: relative;
+  box-shadow: 0 0 10pxrgba 0, 0, 0, 0.2;
+}
+.tournament_match-centralcontent {
+  flex: 1;
+  position: relative;
+  clear: both;
+}
+.tournament_match-centralcontent--box {
+  text-align: center;
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+  color: #fff;
+  padding-top: 1rem;
+  background-color: #37003c;
+  overflow: hidden;
+}
+.tournament_match-centralcontent--box---background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  max-height: 100%;
+}
+.tournament_match-centralcontent--box---image {
+  width: 100%;
+  position: relative;
+  margin-top: -14%;
+}
+
+/*# sourceMappingURL=style.css.map */

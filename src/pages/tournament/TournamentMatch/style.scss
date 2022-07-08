@@ -1,0 +1,47 @@
+.tournament_match {
+  &-block {
+    display: flex;
+  }
+  &-nav {
+    display: flex;
+    &--block {
+      width: 24rem;
+      flex: 0 26rem;
+      padding-top: 3rem;
+      float: left;
+      z-index: 62;
+      background: #fff;
+      position: relative;
+      box-shadow: 0 0 10pxrgba (0, 0, 0, 0.2);
+    }
+  }
+  &-centralcontent {
+    flex: 1;
+    position: relative;
+    clear: both;
+    &--box {
+      text-align: center;
+      background-size: cover;
+      background-position: 50%;
+      position: relative;
+      color: #fff;
+      padding-top: 1rem;
+      background-color: #37003c;
+      overflow: hidden;
+      &---background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+        max-height: 100%;
+      }
+      &---image {
+        width: 100%;
+        position: relative;
+        margin-top: -14%;
+      }
+    }
+  }
+}
