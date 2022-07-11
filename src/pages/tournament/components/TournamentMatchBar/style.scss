@@ -1,0 +1,37 @@
+.tournament_matchBar {
+  width: 100%;
+  float: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 2rem;
+  &-text {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  &-position {
+    display: inline-block;
+    float: left;
+    color: white;
+    margin-left: 1rem;
+  }
+  &-referee {
+    width: 29px;
+    height: 20px;
+    vertical-align: middle;
+    margin: 0 0.5rem 0.2rem 0;
+  }
+  &-stadium {
+    width: 29px;
+    height: 20px;
+    vertical-align: middle;
+    margin: 0 0.5rem 0.2rem 0;
+  }
+  &-attendance {
+    width: 29px;
+    height: 20px;
+    vertical-align: middle;
+    margin: 0 0.5rem 0.2rem 0;
+  }
+}
