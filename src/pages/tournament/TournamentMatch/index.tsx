@@ -2,6 +2,7 @@ import React from "react";
 import { TournamentMatchBar } from "../components/TournamentMatchBar";
 import "./style.css";
 import { ReactComponent as SoccerLogo } from "../../../assets/images/soccer-com.svg";
+import { TournamentEvent } from "../components/TournamentEvent";
 export const TournamentMatch = () => {
   return (
     <>
@@ -151,7 +152,7 @@ export const TournamentMatch = () => {
                       </span>
                       MIA
                     </a>
-                    <div className="tournament_match-timeLine--event"></div>
+                    <TournamentEvent></TournamentEvent>
                     <a className="tournament_match-timeLine--team">
                       <span className="tournament_match-timeLine--team---badge">
                         <span className="tournament_match-timeLine--team---badge_block">
