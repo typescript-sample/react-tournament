@@ -15,7 +15,7 @@ export const ButtonTest = (props: ButtonTestProps) => {
     isClicked ? cx(styles.red) : cx(styles.origin)
   );
   return (
-    <button onClick={() => setIsClicked(true)} className={cx(classes)}>
+    <button onClick={() => setIsClicked(!isClicked)} className={cx(classes)}>
       Click Me !
     </button>
   );

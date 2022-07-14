@@ -3,6 +3,46 @@ import { TournamentMatchBar } from "../components/TournamentMatchBar";
 import "./style.css";
 import { ReactComponent as SoccerLogo } from "../../../assets/images/soccer-com.svg";
 import { TournamentEvent } from "../components/TournamentEvent";
+
+const test = [
+  {
+    type: "Score",
+    mins: 27,
+    homeBadge:
+      "https://logos-world.net/wp-content/uploads/2020/05/Miami-Heat-Logo-2000-Present.png ",
+    homeName: "MIA",
+    homeResult: 1,
+    awayBadge:
+      "https://1000logos.net/wp-content/uploads/2016/10/Boston-Celtics-Logo-500x313.png",
+    awayName: "BOS",
+    awayResult: 0,
+    playerName: "Jimmy Butler",
+    playerImg: "https://cdn.nba.com/headshots/nba/latest/1040x760/202710.png",
+    playerNumber: 22,
+    assistance: "Kevin Durant",
+    side: "home",
+  },
+  {
+    type: "Substitution",
+    mins: 40,
+    homeBadge:
+      "https://logos-world.net/wp-content/uploads/2020/05/Miami-Heat-Logo-2000-Present.png ",
+    homeName: "MIA",
+    homeResult: 1,
+    awayBadge:
+      "https://1000logos.net/wp-content/uploads/2016/10/Boston-Celtics-Logo-500x313.png",
+    awayName: "BOS",
+    awayResult: 0,
+    subOn: "Kyrie Irving",
+    subOnNumber: 11,
+    subOnImg: "https://cdn.nba.com/headshots/nba/latest/1040x760/202681.png",
+    subOff: "Kevin Durant",
+    subOffNumber: 7,
+    subOffImg: "https://a.espncdn.com/i/headshots/nba/players/full/3202.png",
+
+    side: "away",
+  },
+];
 export const TournamentMatch = () => {
   return (
     <>
@@ -152,7 +192,33 @@ export const TournamentMatch = () => {
                       </span>
                       MIA
                     </a>
-                    <TournamentEvent></TournamentEvent>
+
+                    {test.map((x: any) => {
+                      return (
+                        <TournamentEvent
+                          type={x.type}
+                          mins={x.mins}
+                          homeBadge={x.homeBadge}
+                          homeName={x.homeName}
+                          homeResult={x.homeResult}
+                          awayBadge={x.awayBadge}
+                          awayName={x.awayName}
+                          awayResult={x.awayResult}
+                          playerName={x.playerName}
+                          playerImg={x.playerImg}
+                          playerNumber={x.playerNumber}
+                          assistance={x.assistance}
+                          subOn={x.subOn}
+                          subOnImg={x.subOnImg}
+                          subOnNumber={x.subOnNumber}
+                          subOff={x.subOff}
+                          subOffImg={x.subOffImg}
+                          subOffNumber={x.subOffNumber}
+                          side={x.side}
+                        ></TournamentEvent>
+                      );
+                    })}
+
                     <a className="tournament_match-timeLine--team">
                       <span className="tournament_match-timeLine--team---badge">
                         <span className="tournament_match-timeLine--team---badge_block">
