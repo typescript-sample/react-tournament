@@ -3,6 +3,7 @@ import { TournamentMatchBar } from "../components/TournamentMatchBar";
 import "./style.css";
 import { ReactComponent as SoccerLogo } from "../../../assets/images/soccer-com.svg";
 import { TournamentEvent } from "../components/TournamentEvent";
+import { MatchEvent } from "../components/MatchEvent";
 
 const test = [
   {
@@ -23,6 +24,24 @@ const test = [
     side: "home",
   },
   {
+    type: "Score",
+    mins: 60,
+    homeBadge:
+      "https://logos-world.net/wp-content/uploads/2020/05/Miami-Heat-Logo-2000-Present.png ",
+    homeName: "MIA",
+    homeResult: 1,
+    awayBadge:
+      "https://1000logos.net/wp-content/uploads/2016/10/Boston-Celtics-Logo-500x313.png",
+    awayName: "BOS",
+    awayResult: 1,
+    playerName: "Jason Tatum",
+    playerImg:
+      "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4065648.png",
+    playerNumber: 0,
+    assistance: "Jaylen Brown",
+    side: "away",
+  },
+  {
     type: "Substitution",
     mins: 40,
     homeBadge:
@@ -38,7 +57,7 @@ const test = [
     subOnImg: "https://cdn.nba.com/headshots/nba/latest/1040x760/202681.png",
     subOff: "Kevin Durant",
     subOffNumber: 7,
-    subOffImg: "https://a.espncdn.com/i/headshots/nba/players/full/3202.png",
+    subOffImg: "https://c.neh.tw/thumb/f/720/comdlpng6955114.jpg",
 
     side: "away",
   },
@@ -80,7 +99,7 @@ export const TournamentMatch = () => {
                         <span className="tournament_match-home--badgeContainer---image">
                           <img
                             className="tournament_match-home--badgeContainer---image----adjust"
-                            src="https://logos-world.net/wp-content/uploads/2020/05/Miami-Heat-Logo-2000-Present.png"
+                            src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/Minnesota_Timberwolves_logo.svg/1200px-Minnesota_Timberwolves_logo.svg.png"
                           ></img>
                         </span>
                       </a>
@@ -89,7 +108,7 @@ export const TournamentMatch = () => {
                         className="tournament_match-teamName tournament_match-teamName--home"
                       >
                         <span className="tournament_match-teamName--adjust">
-                          Miami Heat
+                          Minesota Timberwolves
                         </span>
                       </a>
                     </div>
@@ -132,32 +151,27 @@ export const TournamentMatch = () => {
                     <strong> time</strong>
                   </div>
                   <div className="tournament_match-matchEvents">
-                    <div className="tournament_match-matchEvents--home">
-                      <div className="tournament_match-matchEvents--home---block">
-                        <a>Jimmy Butler </a>
-                        30'
-                        <div className="tournament_match-matchEvents--home---block----icon">
-                          <SoccerLogo className="tournament_match-matchEvents--home---block----icon_adjust"></SoccerLogo>
+                    {test.map((x: any) => {
+                      return x.side === "home" ? (
+                        <div className="tournament_match-matchEvents--home">
+                          <MatchEvent
+                            playerName={x.playerName}
+                            mins={x.mins}
+                            side={x.side}
+                            type={x.type}
+                          ></MatchEvent>
                         </div>
-                      </div>
-
-                      <div className="tournament_match-matchEvents--home---block">
-                        <a>Jimmy Butler </a>
-                        30'
-                        <div className="tournament_match-matchEvents--home---block----icon">
-                          <SoccerLogo className="tournament_match-matchEvents--home---block----icon_adjust"></SoccerLogo>
+                      ) : (
+                        <div className="tournament_match-matchEvents--away">
+                          <MatchEvent
+                            playerName={x.playerName}
+                            mins={x.mins}
+                            side={x.side}
+                            type={x.type}
+                          ></MatchEvent>
                         </div>
-                      </div>
-                    </div>
-                    <div className="tournament_match-matchEvents--away">
-                      <div className="tournament_match-matchEvents--away---block">
-                        <a>Nothingtosay </a>
-                        30'
-                        <div className="tournament_match-matchEvents--away---block----icon">
-                          <SoccerLogo className="tournament_match-matchEvents--away---block----icon_adjust"></SoccerLogo>
-                        </div>
-                      </div>
-                    </div>
+                      );
+                    })}
                   </div>
 
                   <div className="tournament_match-assists">
@@ -192,32 +206,36 @@ export const TournamentMatch = () => {
                       </span>
                       MIA
                     </a>
-
-                    {test.map((x: any) => {
-                      return (
-                        <TournamentEvent
-                          type={x.type}
-                          mins={x.mins}
-                          homeBadge={x.homeBadge}
-                          homeName={x.homeName}
-                          homeResult={x.homeResult}
-                          awayBadge={x.awayBadge}
-                          awayName={x.awayName}
-                          awayResult={x.awayResult}
-                          playerName={x.playerName}
-                          playerImg={x.playerImg}
-                          playerNumber={x.playerNumber}
-                          assistance={x.assistance}
-                          subOn={x.subOn}
-                          subOnImg={x.subOnImg}
-                          subOnNumber={x.subOnNumber}
-                          subOff={x.subOff}
-                          subOffImg={x.subOffImg}
-                          subOffNumber={x.subOffNumber}
-                          side={x.side}
-                        ></TournamentEvent>
-                      );
-                    })}
+                    <div className="tournamentEvent__timeLine">
+                      <div className="tournamentEvent__timeLine__element">
+                        HT
+                      </div>
+                      {test.map((x: any) => {
+                        return (
+                          <TournamentEvent
+                            type={x.type}
+                            mins={x.mins}
+                            homeBadge={x.homeBadge}
+                            homeName={x.homeName}
+                            homeResult={x.homeResult}
+                            awayBadge={x.awayBadge}
+                            awayName={x.awayName}
+                            awayResult={x.awayResult}
+                            playerName={x.playerName}
+                            playerImg={x.playerImg}
+                            playerNumber={x.playerNumber}
+                            assistance={x.assistance}
+                            subOn={x.subOn}
+                            subOnImg={x.subOnImg}
+                            subOnNumber={x.subOnNumber}
+                            subOff={x.subOff}
+                            subOffImg={x.subOffImg}
+                            subOffNumber={x.subOffNumber}
+                            side={x.side}
+                          ></TournamentEvent>
+                        );
+                      })}
+                    </div>
 
                     <a className="tournament_match-timeLine--team">
                       <span className="tournament_match-timeLine--team---badge">

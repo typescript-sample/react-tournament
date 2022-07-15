@@ -9,7 +9,6 @@ import { ReactComponent as RedCardLogo } from "../../../../assets/images/redcard
 import { ReactComponent as YellowCardLogo } from "../../../../assets/images/yellowcard-com.svg";
 import { ReactComponent as SubOff } from "../../../../assets/images/suboff-com.svg";
 import { ReactComponent as SubOn } from "../../../../assets/images/subon-com.svg";
-import { StringLiteral } from "typescript";
 
 type TournamentEventProps = {
   type: "Score" | "Substitution" | "Red Card" | "Yellow Card";
@@ -57,108 +56,229 @@ export const TournamentEvent = (props: TournamentEventProps) => {
     );
   };
   return (
-    <div className={cx("tournamentEvent__timeLine")}>
-      <div
-        className={cx("tournamentEvent__block")}
-        style={{ left: `${props.mins}%` }}
-      >
-        <span>
-          {props.type === "Substitution" ? (
-            <SubstitutionLogo className={iconClasses}></SubstitutionLogo>
-          ) : props.type === "Score" ? (
-            <SoccerLogo className={iconClasses}></SoccerLogo>
+    <div
+      className={cx("tournamentEvent__block")}
+      style={{ left: `${props.mins}%` }}
+    >
+      <span>
+        {props.type === "Substitution" ? (
+          <SubstitutionLogo className={iconClasses}></SubstitutionLogo>
+        ) : props.type === "Score" ? (
+          <SoccerLogo className={iconClasses}></SoccerLogo>
+        ) : props.type === "Red Card" ? (
+          <RedCardLogo className={iconClasses}></RedCardLogo>
+        ) : (
+          <YellowCardLogo className={iconClasses}></YellowCardLogo>
+        )}
+      </span>
+      {props.mins}
+      <span></span>
+
+      <div className={cx("tournamentEvent__inforContainer")}>
+        <div>
+          <header className={cx("tournamentEvent__inforContainer__header")}>
+            <div className={cx("tournamentEvent__inforContainer__icon")}>
+              {props.type === "Substitution" ? (
+                <SubstitutionLogo className={headerIcon}></SubstitutionLogo>
+              ) : props.type === "Score" ? (
+                <SoccerLogo className={headerIcon}></SoccerLogo>
+              ) : props.type === "Red Card" ? (
+                <RedCardLogo className={headerIcon}></RedCardLogo>
+              ) : (
+                <YellowCardLogo className={headerIcon}></YellowCardLogo>
+              )}
+            </div>
+
+            <time className={cx("tournamentEvent__inforContainer__time")}>
+              {props.mins}
+            </time>
+            {props.type}
+            <div className={cx("tournamentEvent__inforContainer__teamScore")}>
+              <a className={cx("tournamentEvent__inforContainer__team")}>
+                <span
+                  className={clsx(
+                    cx(
+                      "tournamentEvent__inforContainer__teamBadge",
+                      "tournamentEvent__inforContainer__homeTeamBadge"
+                    )
+                  )}
+                >
+                  <span
+                    className={cx(
+                      "tournamentEvent__inforContainer__teamBadge__icon"
+                    )}
+                  >
+                    <img
+                      src={props.homeBadge}
+                      className={cx(
+                        "tournamentEvent__inforContainer__teamBadge__icon--adjust"
+                      )}
+                    ></img>
+                  </span>
+                </span>
+                <span
+                  className={cx(
+                    "tournamentEvent__inforContainer__homeTeamName"
+                  )}
+                >
+                  {props.homeName}
+                </span>
+              </a>
+              <span className={cx("tournamentEvent__inforContainer__team")}>
+                {props.homeResult}
+              </span>
+              {"-"}
+              <span className={cx("tournamentEvent__inforContainer__team")}>
+                {props.awayResult}
+              </span>
+
+              <a className={cx("tournamentEvent__inforContainer__team")}>
+                <span
+                  className={cx(
+                    "tournamentEvent__inforContainer__awayTeamName"
+                  )}
+                >
+                  {props.awayName}
+                </span>
+                <span
+                  className={clsx(
+                    cx(
+                      "tournamentEvent__inforContainer__teamBadge",
+                      "tournamentEvent__inforContainer__awayTeamBadge"
+                    )
+                  )}
+                >
+                  <span
+                    className={cx(
+                      "tournamentEvent__inforContainer__teamBadge__icon"
+                    )}
+                  >
+                    <img
+                      src={props.awayBadge}
+                      className={cx(
+                        "tournamentEvent__inforContainer__teamBadge__icon--adjust"
+                      )}
+                    ></img>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </header>
+
+          {props.type === "Score" ? (
+            <div className={cx("tournamentEvent__inforContent")}>
+              <img
+                src={props.playerImg}
+                className={cx("tournamentEvent__inforContent__scorerImage")}
+              ></img>
+              <div className={cx("tournamentEvent__inforContent__scorerInfor")}>
+                <a
+                  className={cx(
+                    "tournamentEvent__inforContent__scorerInfor__name"
+                  )}
+                >
+                  {props.playerNumber} {"."} {props.playerName}
+                </a>
+                <div
+                  className={cx("tournamentEvent__inforContent__assistInfor")}
+                >
+                  {"Ast. "}
+                  <a
+                    className={cx(
+                      "tournamentEvent__inforContent__assistInfor--name"
+                    )}
+                  >
+                    {props.assistance}
+                  </a>
+                </div>
+              </div>
+            </div>
+          ) : props.type === "Substitution" ? (
+            <>
+              {" "}
+              <div
+                className={cx(
+                  "tournamentEvent__inforContent",
+                  "tournamentEvent__inforContent__substitution",
+                  "tournamentEvent__inforContent__substitution--subOut"
+                )}
+              >
+                <img
+                  className={cx(
+                    "tournamentEvent__inforContent__substitution__image",
+                    "tournamentEvent__inforContent__substitution__image--subOut"
+                  )}
+                  src={props.subOffImg}
+                ></img>
+                <div
+                  className={cx(
+                    "tournamentEvent__inforContent__substitution__playerInfor"
+                  )}
+                >
+                  <a
+                    className={cx(
+                      "tournamentEvent__inforContent__substitution__playerInfor--name"
+                    )}
+                  >
+                    {props.subOffNumber} {props.subOff}
+                    <div
+                      className={cx(
+                        "tournamentEvent__inforContent__substitution__icon"
+                      )}
+                    >
+                      <SubOff
+                        className={cx(
+                          "tournamentEvent__inforContent__substitution__icon--adjust"
+                        )}
+                      ></SubOff>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                className={cx(
+                  "tournamentEvent__inforContent",
+                  "tournamentEvent__inforContent__substitution",
+                  "tournamentEvent__inforContent__substitution--subOn"
+                )}
+              >
+                <img
+                  className={cx(
+                    "tournamentEvent__inforContent__substitution__image",
+                    "tournamentEvent__inforContent__substitution__image--subOn"
+                  )}
+                  src={props.subOnImg}
+                ></img>
+                <div
+                  className={cx(
+                    "tournamentEvent__inforContent__substitution__playerInfor--subOn"
+                  )}
+                >
+                  <a
+                    className={cx(
+                      "tournamentEvent__inforContent__substitution__playerInfor--name",
+                      "tournamentEvent__inforContent__substitution__playerInfor--name--subOn"
+                    )}
+                  >
+                    {props.subOnNumber} {props.subOn}
+                    <div
+                      className={cx(
+                        "tournamentEvent__inforContent__substitution__icon"
+                      )}
+                    >
+                      <SubOn
+                        className={cx(
+                          "tournamentEvent__inforContent__substitution__icon--adjust",
+                          "tournamentEvent__inforContent__substitution__icon--subOn"
+                        )}
+                      ></SubOn>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </>
           ) : props.type === "Red Card" ? (
-            <RedCardLogo className={iconClasses}></RedCardLogo>
-          ) : (
-            <YellowCardLogo className={iconClasses}></YellowCardLogo>
-          )}
-        </span>
-        {props.mins}
-        <span></span>
-        <div className={cx("tournamentEvent__inforContainer")}>
-          <div>
-            <header className={cx("tournamentEvent__inforContainer__header")}>
-              <div className={cx("tournamentEvent__inforContainer__icon")}>
-                {checkIcon(headerIcon, props.type)}
-              </div>
-
-              <time className={cx("tournamentEvent__inforContainer__time")}>
-                {props.mins}
-              </time>
-              {props.type}
-              <div className={cx("tournamentEvent__inforContainer__teamScore")}>
-                <a className={cx("tournamentEvent__inforContainer__team")}>
-                  <span
-                    className={clsx(
-                      cx(
-                        "tournamentEvent__inforContainer__teamBadge",
-                        "tournamentEvent__inforContainer__homeTeamBadge"
-                      )
-                    )}
-                  >
-                    <span
-                      className={cx(
-                        "tournamentEvent__inforContainer__teamBadge__icon"
-                      )}
-                    >
-                      <img
-                        src={props.homeBadge}
-                        className={cx(
-                          "tournamentEvent__inforContainer__teamBadge__icon--adjust"
-                        )}
-                      ></img>
-                    </span>
-                  </span>
-                  <span
-                    className={cx(
-                      "tournamentEvent__inforContainer__homeTeamName"
-                    )}
-                  >
-                    {props.homeName}
-                  </span>
-                </a>
-                <span className={cx("tournamentEvent__inforContainer__team")}>
-                  {props.homeResult}
-                </span>
-                {"-"}
-                <span className={cx("tournamentEvent__inforContainer__team")}>
-                  {props.awayResult}
-                </span>
-
-                <a className={cx("tournamentEvent__inforContainer__team")}>
-                  <span
-                    className={cx(
-                      "tournamentEvent__inforContainer__awayTeamName"
-                    )}
-                  >
-                    {props.awayName}
-                  </span>
-                  <span
-                    className={clsx(
-                      cx(
-                        "tournamentEvent__inforContainer__teamBadge",
-                        "tournamentEvent__inforContainer__awayTeamBadge"
-                      )
-                    )}
-                  >
-                    <span
-                      className={cx(
-                        "tournamentEvent__inforContainer__teamBadge__icon"
-                      )}
-                    >
-                      <img
-                        src={props.awayBadge}
-                        className={cx(
-                          "tournamentEvent__inforContainer__teamBadge__icon--adjust"
-                        )}
-                      ></img>
-                    </span>
-                  </span>
-                </a>
-              </div>
-            </header>
-
-            {props.type === "Score" ? (
+            <>
               <div className={cx("tournamentEvent__inforContent")}>
                 <img
                   src={props.playerImg}
@@ -174,150 +294,35 @@ export const TournamentEvent = (props: TournamentEventProps) => {
                   >
                     {props.playerNumber} {"."} {props.playerName}
                   </a>
-                  <div
-                    className={cx("tournamentEvent__inforContent__assistInfor")}
-                  >
-                    {"Ast. "}
-                    <a
-                      className={cx(
-                        "tournamentEvent__inforContent__assistInfor--name"
-                      )}
-                    >
-                      {props.assistance}
-                    </a>
-                  </div>
                 </div>
               </div>
-            ) : props.type === "Substitution" ? (
-              <>
-                {" "}
+            </>
+          ) : (
+            <>
+              <div className={cx("tournamentEvent__inforContent")}>
+                <img
+                  src={props.playerImg}
+                  className={cx("tournamentEvent__inforContent__scorerImage")}
+                ></img>
                 <div
-                  className={cx(
-                    "tournamentEvent__inforContent",
-                    "tournamentEvent__inforContent__substitution",
-                    "tournamentEvent__inforContent__substitution--subOut"
-                  )}
+                  className={cx("tournamentEvent__inforContent__scorerInfor")}
                 >
-                  <img
+                  <a
                     className={cx(
-                      "tournamentEvent__inforContent__substitution__image",
-                      "tournamentEvent__inforContent__substitution__image--subOut"
-                    )}
-                    src={props.subOffImg}
-                  ></img>
-                  <div
-                    className={cx(
-                      "tournamentEvent__inforContent__substitution__playerInfor"
+                      "tournamentEvent__inforContent__scorerInfor__name"
                     )}
                   >
-                    <a
-                      className={cx(
-                        "tournamentEvent__inforContent__substitution__playerInfor--name"
-                      )}
-                    >
-                      {props.subOffNumber} {props.subOff}
-                      <div
-                        className={cx(
-                          "tournamentEvent__inforContent__substitution__icon"
-                        )}
-                      >
-                        <SubOff
-                          className={cx(
-                            "tournamentEvent__inforContent__substitution__icon--adjust"
-                          )}
-                        ></SubOff>
-                      </div>
-                    </a>
-                  </div>
+                    {props.playerNumber} {"."} {props.playerName}
+                  </a>
                 </div>
-                <div
-                  className={cx(
-                    "tournamentEvent__inforContent",
-                    "tournamentEvent__inforContent__substitution",
-                    "tournamentEvent__inforContent__substitution--subOn"
-                  )}
-                >
-                  <img
-                    className={cx(
-                      "tournamentEvent__inforContent__substitution__image",
-                      "tournamentEvent__inforContent__substitution__image--subOn"
-                    )}
-                    src={props.subOnImg}
-                  ></img>
-                  <div
-                    className={cx(
-                      "tournamentEvent__inforContent__substitution__playerInfor--subOn"
-                    )}
-                  >
-                    <a
-                      className={cx(
-                        "tournamentEvent__inforContent__substitution__playerInfor--name",
-                        "tournamentEvent__inforContent__substitution__playerInfor--name--subOn"
-                      )}
-                    >
-                      {props.subOnNumber} {props.subOn}
-                      <div
-                        className={cx(
-                          "tournamentEvent__inforContent__substitution__icon"
-                        )}
-                      >
-                        <SubOn
-                          className={cx(
-                            "tournamentEvent__inforContent__substitution__icon--adjust",
-                            "tournamentEvent__inforContent__substitution__icon--subOn"
-                          )}
-                        ></SubOn>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </>
-            ) : props.type === "Red Card" ? (
-              <>
-                <div className={cx("tournamentEvent__inforContent")}>
-                  <img
-                    src={props.playerImg}
-                    className={cx("tournamentEvent__inforContent__scorerImage")}
-                  ></img>
-                  <div
-                    className={cx("tournamentEvent__inforContent__scorerInfor")}
-                  >
-                    <a
-                      className={cx(
-                        "tournamentEvent__inforContent__scorerInfor__name"
-                      )}
-                    >
-                      {props.playerNumber} {"."} {props.playerName}
-                    </a>
-                  </div>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className={cx("tournamentEvent__inforContent")}>
-                  <img
-                    src={props.playerImg}
-                    className={cx("tournamentEvent__inforContent__scorerImage")}
-                  ></img>
-                  <div
-                    className={cx("tournamentEvent__inforContent__scorerInfor")}
-                  >
-                    <a
-                      className={cx(
-                        "tournamentEvent__inforContent__scorerInfor__name"
-                      )}
-                    >
-                      {props.playerNumber} {"."} {props.playerName}
-                    </a>
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
+    </div>
 
-      {/* <div className={cx("tournamentEvent__block")} style={{ left: `35%` }}>
+    /* <div className={cx("tournamentEvent__block")} style={{ left: `35%` }}>
         <span>
           <SoccerLogo
             className={cx(
@@ -442,7 +447,6 @@ export const TournamentEvent = (props: TournamentEventProps) => {
             </div>
           </div>
         </div>
-      </div> */}
-    </div>
+      </div> */
   );
 };
