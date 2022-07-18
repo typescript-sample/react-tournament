@@ -1,15 +1,16 @@
 import React from "react";
 import classNames from "classnames/bind";
-import style from "./style.module.scss";
+import styles from "./matchEventAssistant.module.scss";
+import { PlayerClient } from "../../../../admin/service";
 
 type MatchEventAssistantProps = {
-  type: "Score" | "Red Card" | "Yellow Card" | "Substitution";
+  // type?: "Score" | "Red Card" | "Yellow Card" | "Substitution";
   side: "home" | "away";
-  playerName: string;
-  mins: number;
+  assistance?: string;
+  mins?: number;
 };
 
-const cx = classNames.bind(style);
+const cx = classNames.bind(styles);
 
 export const MatchEventAssistant = (props: MatchEventAssistantProps) => {
   const checkMatchEventSide = cx(
@@ -22,8 +23,8 @@ export const MatchEventAssistant = (props: MatchEventAssistantProps) => {
     <>
       <div className={checkMatchEventSide}>
         <div className={cx("matchEventAssistant__event")}>
-          <a href="">Kyle Lowry </a>
-          30'
+          <a href="">{props.assistance} </a>
+          {props.mins}'
         </div>
       </div>
     </>
