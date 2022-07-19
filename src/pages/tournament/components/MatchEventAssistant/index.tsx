@@ -13,20 +13,20 @@ type MatchEventAssistantProps = {
 const cx = classNames.bind(styles);
 
 export const MatchEventAssistant = (props: MatchEventAssistantProps) => {
-  const checkMatchEventSide = cx(
-    props.side === "home"
-      ? "matchEventAssistant__home"
-      : "matchEventAssistant__away"
-  );
+  // const checkMatchEventSide = cx(
+  //   props.side === "home"
+  //     ? "matchEventAssistant__home"
+  //     : "matchEventAssistant__away"
+  // );
 
   return (
     <>
-      <div className={checkMatchEventSide}>
-        <div className={cx("matchEventAssistant__event")}>
-          <a href="">{props.assistance} </a>
-          {props.mins}'
-        </div>
+      {/* <div className={checkMatchEventSide}> */}
+      <div className={cx("matchEventAssistant__event")}>
+        <a href="">{props.assistance} </a>
+        {props.mins}'
       </div>
+      {/* </div> */}
     </>
   );
 };

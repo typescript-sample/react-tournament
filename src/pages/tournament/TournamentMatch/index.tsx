@@ -11,6 +11,7 @@ import { context } from "../../../admin/service";
 import { MatchResult } from "../components/MatchResult";
 import { MatchResultDetailBar } from "../components/MatchResult/MatchResultDetailBar";
 import clsx from "clsx";
+import { TournamentSidebarFixture } from "../components/TournamentSidebarFixture";
 
 const cx = classNames.bind(styles);
 const test: MatchEventInterface[] = [
@@ -94,7 +95,9 @@ export const TournamentMatch = () => {
     <>
       <section className={cx("__wrapper")}>
         <div className={cx("__nav")}>
-          <nav className={cx("__nav__block")}>1</nav>
+          <nav className={cx("__nav__block")}>
+            <TournamentSidebarFixture></TournamentSidebarFixture>
+          </nav>
         </div>
         <div className={cx("__centralContent")}>
           <section className={cx("__centralContent__box")}>
@@ -170,9 +173,23 @@ export const TournamentMatch = () => {
 
                   <div className={cx("__assists")}>
                     <div className={cx("__assists__title")}>Assists</div>
-                    <div>
+                    <div className={cx("__assistsHome")}>
                       {test.map((x: any) => {
-                        return x.assistance != null ? (
+                        return x.assistance != null && x.side === "home" ? (
+                          <MatchEventAssistant
+                            assistance={x.assistance}
+                            side={x.side}
+                            mins={x.mins}
+                          ></MatchEventAssistant>
+                        ) : (
+                          <></>
+                        );
+                      })}
+                    </div>
+
+                    <div className={cx("__assistsAway")}>
+                      {test.map((x: any) => {
+                        return x.assistance != null && x.side === "away" ? (
                           <MatchEventAssistant
                             assistance={x.assistance}
                             side={x.side}
@@ -243,9 +260,16 @@ export const TournamentMatch = () => {
                 </div>
               </div>
             </div>
-            <div></div>
-            <div></div>
           </section>
+          <div className={cx("__optionsBlock")}>
+            <div className={cx("__optionsBlock__wrapper")}>
+              <ul>
+                <li>1</li>
+                <li>2</li>
+              </ul>
+            </div>
+          </div>
+          <div>222222222222222222</div>
         </div>
       </section>
     </>

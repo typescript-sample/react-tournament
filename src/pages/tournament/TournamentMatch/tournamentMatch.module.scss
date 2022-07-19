@@ -122,6 +122,9 @@
   color: hsla(0, 0%, 100%, 0.6);
   position: relative;
   font-size: 1rem;
+  display: table;
+  width: 100%;
+  margin-top: 2rem;
   &__title {
     position: absolute;
     top: 0;
@@ -131,6 +134,14 @@
     z-index: -1;
     line-height: 2.5rem;
   }
+}
+.__assists::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  top: 2.5rem;
+  border-left: 1px dotted hsla(0, 0%, 100%, 0.6);
 }
 
 .__timeLine {
@@ -200,3 +211,26 @@
 //   display: table;
 //   clear: both;
 // }
+
+.__assistsHome {
+  padding-right: 7rem;
+  text-align: right;
+  float: left;
+  width: 50%;
+}
+.__assistsAway {
+  padding-left: 7rem;
+  text-align: left;
+  float: left;
+  width: 50%;
+}
+
+.__optionsBlock {
+  margin-top: -4.5rem;
+  position: relative;
+  z-index: 10;
+  &__wrapper {
+    padding: 0rem 4rem;
+    margin-bottom: 2rem;
+  }
+}

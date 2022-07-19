@@ -1,5 +1,6 @@
 import React from "react";
 import { TournamentNav } from "../components/TournamentNav";
+import { TournamentSidebarFixture } from "../components/TournamentSidebarFixture";
 import { UpcommingMatchesShort } from "../components/UpcommingMatchesShort";
 
 import "./style.css";
@@ -36,36 +37,7 @@ export const TournamentHome = () => {
         <div className="tournamentHome_main-wrapper">
           <div className="tournamentHome_main-content">
             <nav className="tournamentHome_main-sidebar">
-              <div className="tournamentHome_main-sidebar--fixturesHeader">
-                <header>
-                  <div className="tournamentHome_main-sidebar--fixturesHeader---week">
-                    MatchWeek 1
-                  </div>
-                  <div className="tournamentHome_main-sidebar--fixturesHeader---competition">
-                    <img
-                      className="tournamentHome_main-sidebar--fixturesHeader---competition----image"
-                      src="https://upload.wikimedia.org/wikipedia/vi/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png"
-                      alt=""
-                    />
-                  </div>
-                  <div className="tournamentHome_main-sidebar--fixturesHeader---localtime">
-                    All times shown are your <strong>local time</strong>
-                  </div>
-                </header>
-                <div className="tournamentHome_main-sidebar--matchListContainer">
-                  <div className="tournamentHome-main-sidebar--matchListContainer---time">
-                    <time>Saturday 6 August</time>
-                    <UpcommingMatchesShort
-                      team1Name="MIA"
-                      team1Image="https://cdn.nba.com/logos/nba/1610612748/global/L/logo.svg"
-                      team2Name="MIA"
-                      team2Image="https://cdn.nba.com/logos/nba/1610612748/global/L/logo.svg"
-                      time="2:00"
-                    ></UpcommingMatchesShort>
-                  </div>
-                </div>
-              </div>
-
+              <TournamentSidebarFixture></TournamentSidebarFixture>
               <div className="tournamentHome_main-sidebar--standingHeader"></div>
             </nav>
             <div className="tournamentHome_main-sidebarPush">

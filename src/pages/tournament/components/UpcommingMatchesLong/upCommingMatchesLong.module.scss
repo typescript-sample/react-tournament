@@ -1,16 +1,16 @@
-.upcommingMatchesLong > time {
-  text-align: center;
-  display: block;
-  padding: 0 1rem 0.8rem;
-  font-size: 0.8rem;
-  color: #2f2f2f;
-  font-weight: 600;
-  margin-top: 1rem;
-}
-.upcommingMatchesLong_wrapper {
+// .__block > time {
+//   text-align: center;
+//   display: block;
+//   padding: 0 1rem 0.8rem;
+//   font-size: 0.8rem;
+//   color: #2f2f2f;
+//   font-weight: 600;
+//   margin-top: 1rem;
+// }
+.__wrapper {
   position: relative;
 }
-.upcommingMatchesLong_block {
+.__block {
   background-color: #fff;
   padding: 0.8rem 5rem;
   border-bottom: 1px solid #efefef;
@@ -23,11 +23,11 @@
   font-weight: 400;
   font-size: 1.2rem;
   text-align: left;
-  &-matchdetails {
+  &__matchdetails {
     width: 60%;
     position: relative;
   }
-  &-team1Name {
+  &__homeName {
     font-weight: 600;
     min-width: 3.8rem;
     font-size: 1rem;
@@ -36,14 +36,15 @@
     padding-right: 2rem;
     position: relative;
   }
-  &-team1Image {
+  &__homeBadge {
     margin: 0 0.5rem;
     &--adjust {
       width: 2.5rem;
       height: 2.5rem;
+      object-fit: cover;
     }
   }
-  &-team2Name {
+  &__awayName {
     font-weight: 600;
     min-width: 3.8rem;
     font-size: 1rem;
@@ -51,14 +52,15 @@
     padding-left: 2rem;
     width: 30%;
   }
-  &-team2Image {
+  &__awayBadge {
     margin: 0 0.5rem;
     &--adjust {
       width: 2.5rem;
       height: 2.5rem;
+      object-fit: cover;
     }
   }
-  &-stadium {
+  &__stadium {
     padding-left: 1rem;
     font-size: 1rem;
     min-width: 16rem;
@@ -70,13 +72,13 @@
     border-left-color: rgba(0, 0, 0, 0.15);
     text-align: left;
     font-weight: 600;
-    &--icon {
+    &__icon {
       width: 30px;
       height: 35px;
       margin-right: 2rem;
     }
   }
-  &-icon {
+  &__icon {
     &--adjust {
       position: absolute;
       top: 1.5rem;
@@ -88,19 +90,19 @@
   }
 }
 
-.upcommingMatchesLong_block span {
+.__block span {
   display: inline-block;
   vertical-align: middle;
 }
-.upcommingMatchesLong_block-team1Name abbr {
+.__block-homeName abbr {
   text-decoration: none;
   border: 0;
 }
-.upcommingMatchesLong_block-team2Name abbr {
+.__block-awayName abbr {
   text-decoration: none;
   border: 0;
 }
-.upcommingMatchesLong_block time {
+.__block time {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -116,12 +118,12 @@
   font-size: 0.8rem;
 }
 
-.upcommingMatchesLong_block:hover {
+.__block:hover {
   background: linear-gradient(to right, #642b73, #c6426e);
   color: white !important;
   cursor: pointer;
 }
 
-.upcommingMatchesLong_block:hover .upcommingMatchesLong_block-icon--adjust {
+.__block:hover .__block__icon--adjust {
   right: 2rem;
 }

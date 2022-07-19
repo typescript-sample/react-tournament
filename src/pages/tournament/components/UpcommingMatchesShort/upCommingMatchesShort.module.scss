@@ -7,8 +7,10 @@
   font-weight: 600;
   margin-top: 1rem;
 }
-
-.upcommingMatches_block {
+.__wrapper {
+  position: relative;
+}
+.__block {
   background-color: #fff;
   padding: 0.8rem 1rem;
   border-bottom: 1px solid #efefef;
@@ -21,58 +23,57 @@
   font-weight: 400;
   font-size: 1.2rem;
   text-align: center;
-}
-.upcommingMatches_block-team1Name {
-  font-weight: 600;
-  min-width: 3.8rem;
-  font-size: 1rem;
-  text-align: right;
-}
-.upcommingMatches_block-team1Image {
-  margin: 0 0.5rem;
-}
-.upcommingMatches_block-team1Image--adjust {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-.upcommingMatches_block-team2Name {
-  font-weight: 600;
-  min-width: 3.8rem;
-  font-size: 1rem;
-  text-align: left;
-}
-.upcommingMatches_block-team2Image {
-  margin: 0 0.5rem;
-}
-.upcommingMatches_block-team2Image--adjust {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-.upcommingMatches_block-icon--adjust {
-  position: absolute;
-  top: 1.7rem;
-  right: 1.6rem;
-  width: 15px;
-  height: 14px;
-  transition: right 0.2s;
+  &__homeName {
+    font-weight: 600;
+    min-width: 3.8rem;
+    font-size: 1rem;
+    text-align: right;
+  }
+  &__homeBadge {
+    margin: 0 0.5rem;
+    &--adjust {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+  &__awayName {
+    font-weight: 600;
+    min-width: 3.8rem;
+    font-size: 1rem;
+    text-align: left;
+  }
+  &__awayBadge {
+    margin: 0 0.5rem;
+    &--adjust {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+  &__icon {
+    &--adjust {
+      position: absolute;
+      top: 1.7rem;
+      right: 1.6rem;
+      width: 15px;
+      height: 14px;
+      transition: right 0.2s;
+    }
+  }
 }
 
-.upcommingMatches_block span {
+.__block span {
   display: inline-block;
   vertical-align: middle;
 }
-
-.upcommingMatches_block-team1Name abbr {
+.__block__homeName abbr {
   text-decoration: none;
   border: 0;
 }
-
-.upcommingMatches_block-team2Name abbr {
+.__block__awayName abbr {
   text-decoration: none;
   border: 0;
 }
-
-.upcommingMatches_block time {
+.__block time {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -88,14 +89,12 @@
   font-size: 0.8rem;
 }
 
-.upcommingMatches_block:hover {
+.__block:hover {
   background: linear-gradient(to right, #642b73, #c6426e);
   color: white !important;
   cursor: pointer;
 }
 
-.upcommingMatches_block:hover .upcommingMatches_block-icon--adjust {
+.__block:hover .__block__icon--adjust {
   right: 1.2rem;
 }
-
-/*# sourceMappingURL=style.css.map */

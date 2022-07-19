@@ -1,0 +1,45 @@
+.wrapper {
+  position: relative;
+  padding: 2.3rem 1rem 2rem;
+  background: #fff;
+  text-align: center;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 15%);
+}
+
+.__week {
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  font-weight: 400;
+  text-align: center;
+  color: #ff2882;
+}
+
+.__logoWrapper {
+  display: inline-block;
+  vertical-align: middle;
+  &--adjust {
+    width: 150px;
+    height: 80px;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.__localTime {
+  padding-top: 1rem;
+  font-size: 0.7rem;
+  color: #6c6c6c;
+}
+
+.__matchList {
+  & > time {
+    text-align: center;
+    display: block;
+    padding: 0 1rem 0.8rem;
+    font-size: 0.8rem;
+    color: #2f2f2f;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+}

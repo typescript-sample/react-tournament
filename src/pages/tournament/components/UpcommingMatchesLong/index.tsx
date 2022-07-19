@@ -1,7 +1,11 @@
 import React from "react";
-import "./style.css";
-import { ReactComponent as StadiumLogo } from "../../../../assets/images/stadium.svg";
 
+import { ReactComponent as StadiumLogo } from "../../../../assets/images/stadium.svg";
+import classNames from "classnames/bind";
+import styles from "./upCommingMatchesLong.module.scss";
+import clsx from "clsx";
+
+const cx = classNames.bind(styles);
 type UpcommingMatchesLongProps = {
   team1Name: string;
   team1Image: string;
@@ -14,42 +18,42 @@ type UpcommingMatchesLongProps = {
 export const UpcommingMatchesLong = (props: UpcommingMatchesLongProps) => {
   return (
     <>
-      <li className="upcommingMatchesLong_wrapper">
-        <a className="upcommingMatchesLong_block">
-          <span className="upcommingMatchesLong_block-matchdetails">
-            <span className="upcommingMatchesLong_block-team1Name">
+      <li className={cx("__wrapper")}>
+        <a className={cx("__block")}>
+          <span className={cx("__block__matchdetails")}>
+            <span className={cx("__block__homeName")}>
               <abbr title="Miami Heat">{props.team1Name}</abbr>
             </span>
-            <span className="upcommingMatchesLong_block-team1Image">
+            <span className={cx("__block__homeBadge")}>
               <img
-                className="upcommingMatchesLong_block-team1Image--adjust"
+                className={cx("__block__homeBadge--adjust")}
                 src={props.team1Image}
                 alt=""
               />
             </span>
             <time>{props.time}</time>
-            <span className="upcommingMatchesLong_block-team2Image">
+            <span className={cx("__block__awayBadge")}>
               <img
-                className="upcommingMatchesLong_block-team2Image--adjust"
+                className={cx("__block__awayBadge--adjust")}
                 src={props.team2Image}
                 alt=""
               />
             </span>
-            <span className="upcommingMatchesLong_block-team2Name">
+            <span className={cx("__block__awayName")}>
               <abbr title="Miami Heat">{props.team2Name}</abbr>
             </span>
           </span>
 
-          <span className="upcommingMatchesLong_block-stadium">
-            <span className="upcommingMatchesLong_block-stadium--icon">
+          <span className={cx("__block__stadium")}>
+            <span className={cx("__block__stadium__icon")}>
               <StadiumLogo></StadiumLogo>
             </span>
             {props.stadium}
           </span>
 
-          <span className="upcommingMatchesLong_block-icon">
+          <span className={cx("__block__icon")}>
             <img
-              className="upcommingMatchesLong_block-icon--adjust"
+              className={cx("__block__icon--adjust")}
               src="https://www.freeiconspng.com/uploads/right-arrow-icon-12.png"
               alt=""
             />

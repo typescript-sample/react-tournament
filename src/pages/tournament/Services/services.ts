@@ -9,7 +9,7 @@ class TournamentContext {
   getTournamentServices(): TournamentServicesRoot {
     if (!this.tournamentServices) {
       this.tournamentServices = new TournamentServices(
-        "http://localhost:8080/rounds",
+        "http://localhost:8080/tournaments",
         httpRequest
       );
     }
