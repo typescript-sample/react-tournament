@@ -1,7 +1,8 @@
+@import "/src/styles/Variables.scss";
 .wrapper {
   position: relative;
   padding: 2.3rem 1rem 2rem;
-  background: #fff;
+  background: $primary-color;
   text-align: center;
   border-radius: 3px 3px 0 0;
   box-shadow: 0 1px 4px 0 rgb(0 0 0 / 15%);
@@ -12,7 +13,7 @@
   margin-bottom: 0.8rem;
   font-weight: 400;
   text-align: center;
-  color: #ff2882;
+  color: #fff;
 }
 
 .__logoWrapper {
@@ -29,7 +30,7 @@
 .__localTime {
   padding-top: 1rem;
   font-size: 0.7rem;
-  color: #6c6c6c;
+  color: $third-color;
 }
 
 .__matchList {
@@ -38,8 +39,16 @@
     display: block;
     padding: 0 1rem 0.8rem;
     font-size: 0.8rem;
-    color: #2f2f2f;
+    color: $fourth-color;
     font-weight: 600;
     margin-top: 1rem;
+  }
+  &--adjust {
+    :nth-child(odd) {
+      background-color: $second-color;
+    }
+    :nth-child(even) {
+      background-color: $fourth-color;
+    }
   }
 }

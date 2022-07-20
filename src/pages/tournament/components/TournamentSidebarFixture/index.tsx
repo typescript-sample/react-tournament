@@ -12,7 +12,7 @@ export const TournamentSidebarFixture = () => {
         <div className={cx("__logoWrapper")}>
           <img
             className={cx("__logoWrapper--adjust")}
-            src="https://andscape.com/wp-content/uploads/2017/06/nbalogo.jpg?w=700"
+            src="https://www.tma.vn/Themes/TMAVN.Theme/Images/TMA-logo2.png"
             alt=""
           />
         </div>
@@ -22,13 +22,22 @@ export const TournamentSidebarFixture = () => {
       </header>
       <div className={cx("__matchList")}>
         <time>Saturday 6 August</time>
-        <UpcommingMatchesShort
-          homeName="MIA"
-          homeBadge="https://cdn.nba.com/logos/nba/1610612748/global/L/logo.svg"
-          awayName="MIA"
-          awayBadge="https://cdn.nba.com/logos/nba/1610612748/global/L/logo.svg"
-          time="2:00"
-        ></UpcommingMatchesShort>
+        <div className={cx("__matchList--adjust")}>
+          <UpcommingMatchesShort
+            homeName="MIA"
+            homeBadge="https://cdn.nba.com/logos/nba/1610612748/global/L/logo.svg"
+            awayName="MIA"
+            awayBadge="https://cdn.nba.com/logos/nba/1610612748/global/L/logo.svg"
+            time="2:00"
+          ></UpcommingMatchesShort>
+          <UpcommingMatchesShort
+            homeName="MIA"
+            homeBadge="https://cdn.nba.com/logos/nba/1610612748/global/L/logo.svg"
+            awayName="MIA"
+            awayBadge="https://cdn.nba.com/logos/nba/1610612748/global/L/logo.svg"
+            time="2:00"
+          ></UpcommingMatchesShort>
+        </div>
       </div>
     </div>
   );

@@ -16,13 +16,8 @@ code {
 body {
   height: 100%;
   width: 100%;
-  font-family: "Roboto";
+  font-family: "Montserrat", sans-serif;
   -webkit-overflow-scrolling: touch;
   margin: 0;
   padding: 0;
-}
-* {
-  font-family: "Roboto";
-  scrollbar-width: thin;
-  /* font-family: "Open Sans", sans-serif; */
 }

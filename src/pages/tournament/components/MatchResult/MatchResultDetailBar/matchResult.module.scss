@@ -1,9 +1,11 @@
+@import "/src/styles/Variables.scss";
+
 .__container {
   position: relative;
   display: flex;
   clear: both;
   align-items: center;
-  background: #37003c;
+  background: $primary-color;
 }
 
 .__team {
@@ -15,7 +17,7 @@
   padding-left: 8.5rem;
   &__badgeContainer {
     left: 0;
-    background: #fff;
+    background: $second-color;
     width: 6.5rem;
     height: 6.5rem;
     padding: 2rem;
@@ -40,7 +42,7 @@
   padding-right: 8.5rem;
   &__badgeContainer {
     right: 0;
-    background: #fff;
+    background: $second-color;
     width: 6.5rem;
     height: 6.5rem;
     padding: 2rem;
@@ -65,12 +67,13 @@
   font-size: 1.6rem;
   font-weight: 600;
   text-decoration: none;
-  color: #fff;
+  color: $third-color;
   height: 6.5rem;
   vertical-align: middle;
   display: table;
   width: 100%;
   transition: 0.2s;
+  font-family: $f-1;
   &__home {
     text-align: left;
   }
@@ -84,7 +87,7 @@
 }
 
 .__scoreContainer {
-  background: #e90052;
+  background: $second-color;
   display: flex;
   justify-content: center;
   &__score {

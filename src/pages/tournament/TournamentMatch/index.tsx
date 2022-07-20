@@ -91,6 +91,7 @@ const test: MatchEventInterface[] = [
 ];
 
 export const TournamentMatch = () => {
+  const [clickedId, setClickedId] = React.useState(false);
   return (
     <>
       <section className={cx("__wrapper")}>
@@ -101,7 +102,53 @@ export const TournamentMatch = () => {
         </div>
         <div className={cx("__centralContent")}>
           <section className={cx("__centralContent__box")}>
-            <picture className={cx("__centralContent__box__background")}>
+            <div className={cx("__centralContent__theme")}>
+              {/* <div className={cx("__centralContent__themeTeams")}> */}
+              <div className={cx("__centralContent__homeTheme")}>
+                <div className={cx("__centralContent__teamLogoBlock")}>
+                  <img
+                    src="https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg"
+                    alt=""
+                    className={cx("__centralContent__teamLogoBlock--adjust")}
+                  />
+                </div>
+              </div>
+              {/* </div> */}
+            </div>
+            <div className={cx("__centralContent__theme")}>
+              {/* <div className={cx("__centralContent__themeTeams")}> */}
+              <div className={cx("__centralContent__awayTheme")}>
+                <div className={cx("__centralContent__teamLogoBlock")}>
+                  <img
+                    src="https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg"
+                    alt=""
+                    className={cx("__centralContent__teamLogoBlock--adjust")}
+                  />
+                </div>
+              </div>
+              {/* </div> */}
+            </div>
+            <div className={cx("__centralContent__theme")}>
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+              >
+                <polygon
+                  points="0,0 60,0 40,100 0,100 0,0"
+                  fill="#CD1F43"
+                  fillOpacity="0.95"
+                ></polygon>
+                <polygon
+                  points="60,0 40,100 100,100 100,0 60,0"
+                  fill="#0D2240"
+                  fillOpacity="0.95"
+                ></polygon>
+              </svg>
+            </div>
+            <div className={cx("__centralContent__theme")}></div>
+            {/* <picture className={cx("__centralContent__box__background")}>
               <source
                 media="min-width: 1024px"
                 srcSet="https://resources.premierleague.com/premierleague/photo/2016/07/21/ccade424-00e6-4310-a183-48f7101b1f5e/Arsenal_Stadium_Emirates.jpeg"
@@ -110,13 +157,12 @@ export const TournamentMatch = () => {
                 className={cx("__centralContent__box__image")}
                 src="https://resources.premierleague.com/premierleague/photo/2016/07/21/ccade424-00e6-4310-a183-48f7101b1f5e/Arsenal_Stadium_Emirates.jpeg"
               ></img>
-            </picture>
+            </picture> */}
             <div className={cx("__container")}>
               <div className={cx("__bar")}>
                 <TournamentMatchBar></TournamentMatchBar>
               </div>
             </div>
-
             <div className={cx("__scoreboxContainer")}>
               <div className={cx("__container")}>
                 <div className={cx("__scoreboxContainer")}>
@@ -131,8 +177,7 @@ export const TournamentMatch = () => {
 
                   <div className={cx("__matchStats")}>
                     <div className={cx("__matchStats__halfTime")}>
-                      <span>Half Time</span>
-                      1-0
+                      <span>Half Time</span>1 - 0
                     </div>
                   </div>
                   <div className={cx("__matchStats__kickOff")}>
@@ -263,9 +308,19 @@ export const TournamentMatch = () => {
           </section>
           <div className={cx("__optionsBlock")}>
             <div className={cx("__optionsBlock__wrapper")}>
-              <ul>
-                <li>1</li>
-                <li>2</li>
+              <ul className={cx("__optionsBlock__wrapper--adjust")}>
+                <li
+                  onClick={() => setClickedId(!clickedId)}
+                  className={clickedId ? cx("__active") : ""}
+                >
+                  Stats
+                </li>
+                <li
+                  onClick={() => setClickedId(!clickedId)}
+                  className={clickedId ? cx("__active") : ""}
+                >
+                  Line up
+                </li>
               </ul>
             </div>
           </div>

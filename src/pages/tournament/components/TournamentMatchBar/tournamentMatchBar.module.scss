@@ -1,34 +1,36 @@
-.tournament_matchBar {
+@import "/src/styles/Variables.scss";
+.__matchBar {
   width: 100%;
   float: left;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 2rem;
-  &-text {
+
+  &__text {
     font-size: 1rem;
     font-weight: 400;
   }
 
-  &-position {
+  &__position {
     display: inline-block;
     float: left;
-    color: white;
+    color: $third-color;
     margin-left: 1rem;
   }
-  &-referee {
+  &__referee {
     width: 29px;
     height: 20px;
     vertical-align: middle;
     margin: 0 0.5rem 0.2rem 0;
   }
-  &-stadium {
+  &__stadium {
     width: 29px;
     height: 20px;
     vertical-align: middle;
     margin: 0 0.5rem 0.2rem 0;
   }
-  &-attendance {
+  &__attendance {
     width: 29px;
     height: 20px;
     vertical-align: middle;
