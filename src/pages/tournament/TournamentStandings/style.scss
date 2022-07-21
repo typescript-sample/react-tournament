@@ -1,50 +1,10 @@
-* {
-  box-sizing: border-box;
-}
-th {
-  padding: 1.2rem 1rem;
-  color: #6c6c6c;
-  font-size: 0.8rem;
-}
-td {
-  border-bottom: 1px solid #efefef;
-  height: 3.75rem;
-}
-ul {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-tbody {
-  display: table-row-group;
-  vertical-align: middle;
-  //   border-color: inherit;
-}
-
-table {
-  width: 100%;
-  text-align: center;
-  font-size: 1.2rem;
-  //   border-collapse: inherit;
-}
-thead {
-  background-color: #fbfbfb;
-}
-tr {
-  display: table-row;
-  vertical-align: inherit;
-  border-color: inherit;
-}
 .container {
   max-width: 1376px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
-  //   background-color: aquamarine;
 }
-
 .standings {
   &-form {
     width: 13rem;

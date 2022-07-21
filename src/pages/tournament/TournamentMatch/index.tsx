@@ -1,17 +1,20 @@
 import React from "react";
 import { TournamentMatchBar } from "../components/TournamentMatchBar";
 import styles from "./tournamentMatch.module.scss";
+import classNames from "classnames/bind";
 import { ReactComponent as SoccerLogo } from "../../../assets/images/soccer-com.svg";
 import { TournamentEvent } from "../components/TournamentEvent";
 import { MatchEvent } from "../components/MatchEvent";
 import { MatchEventAssistant } from "../components/MatchEventAssistant";
 import { MatchEventInterface } from "../Services/models";
-import classNames from "classnames/bind";
+
 import { context } from "../../../admin/service";
 import { MatchResult } from "../components/MatchResult";
 import { MatchResultDetailBar } from "../components/MatchResult/MatchResultDetailBar";
 import clsx from "clsx";
 import { TournamentSidebarFixture } from "../components/TournamentSidebarFixture";
+import { MatchStats } from "../components/MatchStats";
+import { LineUps } from "../components/Lineups";
 
 const cx = classNames.bind(styles);
 const test: MatchEventInterface[] = [
@@ -91,7 +94,7 @@ const test: MatchEventInterface[] = [
 ];
 
 export const TournamentMatch = () => {
-  const [clickedId, setClickedId] = React.useState(false);
+  const [clickedId, setClickedId] = React.useState("");
   return (
     <>
       <section className={cx("__wrapper")}>
@@ -147,7 +150,9 @@ export const TournamentMatch = () => {
                 ></polygon>
               </svg>
             </div>
-            <div className={cx("__centralContent__theme")}></div>
+            <div className={cx("__centralContent__theme")}>
+              <div className={cx("__centralContent__themeShadow")}></div>
+            </div>
             {/* <picture className={cx("__centralContent__box__background")}>
               <source
                 media="min-width: 1024px"
@@ -310,21 +315,46 @@ export const TournamentMatch = () => {
             <div className={cx("__optionsBlock__wrapper")}>
               <ul className={cx("__optionsBlock__wrapper--adjust")}>
                 <li
-                  onClick={() => setClickedId(!clickedId)}
-                  className={clickedId ? cx("__active") : ""}
+                  id="stats"
+                  onClick={(e: any) =>
+                    e.currentTarget.id === "stats" ? setClickedId("stats") : ""
+                  }
+                  className={clickedId === "stats" ? cx("__optionsActive") : ""}
                 >
                   Stats
                 </li>
                 <li
-                  onClick={() => setClickedId(!clickedId)}
-                  className={clickedId ? cx("__active") : ""}
+                  id="lineUps"
+                  onClick={(e: any) =>
+                    e.currentTarget.id === "lineUps"
+                      ? setClickedId("lineUps")
+                      : ""
+                  }
+                  className={
+                    clickedId === "lineUps" ? cx("__optionsActive") : ""
+                  }
                 >
                   Line up
                 </li>
               </ul>
             </div>
           </div>
-          <div>222222222222222222</div>
+          <div className={cx("_detailsWrapper")}>
+            <div
+              className={
+                clickedId === "stats" ? cx("__active") : cx("__inactive")
+              }
+            >
+              <MatchStats></MatchStats>
+            </div>
+            <div
+              className={
+                clickedId === "lineUps" ? cx("__active") : cx("__inactive")
+              }
+            >
+              <LineUps></LineUps>
+            </div>
+          </div>
         </div>
       </section>
     </>
